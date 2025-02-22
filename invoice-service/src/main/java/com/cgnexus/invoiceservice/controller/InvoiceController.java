@@ -15,13 +15,13 @@ import org.springframework.web.context.request.WebRequest;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/invoices")
+@RequestMapping("/v1")
 @RequiredArgsConstructor
 public class InvoiceController {
 
     private final InvoiceService inventoryService;
 
-    @GetMapping
+    @GetMapping("/invoices")
     public ResponseEntity<APIResponse<List<InvoiceDTO>>> getAllInvoicesByUserId(@RequestParam("userId") String userId, WebRequest request) {
 
         List<InvoiceDTO> allInvoices = inventoryService.getAllInvoicesByUserId(userId);

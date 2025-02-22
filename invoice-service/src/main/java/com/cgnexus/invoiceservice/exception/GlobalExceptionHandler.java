@@ -29,4 +29,19 @@ public class GlobalExceptionHandler {
                 .build();
         return ResponseEntity.badRequest().body(response);
     }
+
+    @ExceptionHandler(InvoiceException.class)
+    public ResponseEntity<APIResponse<Void>> handleInvoiceException(InvoiceException ex, WebRequest request) {
+        ErrorDTO errorDTO = ErrorDTO.builder()
+                .errorMessage(ex.getErrorMessage())
+                .errorDetails(ex.getErrorDetails())
+                .build();
+        APIResponse<Void> response = APIResponse.<Void>builder()
+                .error(errorDTO)
+                .status(ex.getStatusCode())
+                .timestamp(Instant.now())
+                .path(request.getDescription(false).split("=")[1])
+                .build();
+        return ResponseEntity.status(ex.getStatusCode()).body(response);
+    }
 }

@@ -11,3 +11,7 @@ server:
   port: 7001
   servlet:
     context-path: /api
+
+invoice:
+  service:
+    url: http://localhost:7002/api

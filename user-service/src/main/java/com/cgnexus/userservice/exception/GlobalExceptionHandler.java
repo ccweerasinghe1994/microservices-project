@@ -29,4 +29,34 @@ public class GlobalExceptionHandler {
                 .build();
         return ResponseEntity.badRequest().body(response);
     }
+
+    @ExceptionHandler(InvoiceException.class)
+    public ResponseEntity<APIResponse<Void>> handleInvoiceException(InvoiceException ex, WebRequest request) {
+        return getApiResponseResponseEntity(request, ex.getErrorMessage(), ex.getErrorDetails(), ex.getStatusCode());
+    }
+
+
+    @ExceptionHandler(UserException.class)
+    public ResponseEntity<APIResponse<Void>> handleUserException(UserException ex, WebRequest request) {
+        return getApiResponseResponseEntity(request, ex.getErrorMessage(), ex.getErrorDetails(), ex.getStatusCode());
+    }
+
+    @ExceptionHandler(InvalidUserIdException.class)
+    public ResponseEntity<APIResponse<Void>> handleInvalidUserIdException(InvalidUserIdException ex, WebRequest request) {
+        return getApiResponseResponseEntity(request, ex.getErrorMessage(), ex.getErrorDetails(), ex.getStatusCode());
+    }
+
+    private ResponseEntity<APIResponse<Void>> getApiResponseResponseEntity(WebRequest request, String errorMessage, List<String> errorDetails, Integer statusCode) {
+        ErrorDTO errorDTO = ErrorDTO.builder()
+                .errorMessage(errorMessage)
+                .errorDetails(errorDetails)
+                .build();
+        APIResponse<Void> response = APIResponse.<Void>builder()
+                .error(errorDTO)
+                .status(statusCode)
+                .timestamp(Instant.now())
+                .path(request.getDescription(false).split("=")[1])
+                .build();
+        return ResponseEntity.status(statusCode).body(response);
+    }
 }
