@@ -1,13 +1,13 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.15 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.15">
   <diagram name="Page-1" id="glr-TP0WHZAvBU3AcTQQ">
-    <mxGraphModel dx="2045" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2045" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="6p7t7H2nrpjSkSjg_kD2-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;" edge="1" parent="1" source="6p7t7H2nrpjSkSjg_kD2-1" target="6p7t7H2nrpjSkSjg_kD2-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6p7t7H2nrpjSkSjg_kD2-7" value="friegn client" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6p7t7H2nrpjSkSjg_kD2-6">
+        <mxCell id="6p7t7H2nrpjSkSjg_kD2-7" value="Friegn client" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6p7t7H2nrpjSkSjg_kD2-6">
           <mxGeometry x="0.1405" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>

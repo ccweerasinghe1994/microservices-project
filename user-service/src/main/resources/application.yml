@@ -7,6 +7,15 @@ spring:
       ddl-auto: validate
   flyway:
     default-schema: user_db
+  cloud:
+    openfeign:
+      client:
+        config:
+          invoice-service-feign-client:
+            connect-timeout: 5000  # 5 seconds
+            read-timeout: 8000    # 8 seconds
+
+
 server:
   port: 7001
   servlet:
@@ -15,3 +24,4 @@ server:
 invoice:
   service:
     url: http://localhost:7002/api
+
