@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: user-service
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    default-schema: user_db
+server:
+  port: 7001
+  servlet:
+    context-path: /api

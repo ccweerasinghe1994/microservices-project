@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: invoice-service
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    default-schema: invoice_db
+server:
+  port: 7002
+  servlet:
+    context-path: /api
