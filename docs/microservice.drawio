@@ -32,7 +32,7 @@
         <mxCell id="6p7t7H2nrpjSkSjg_kD2-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6p7t7H2nrpjSkSjg_kD2-8" target="6p7t7H2nrpjSkSjg_kD2-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6p7t7H2nrpjSkSjg_kD2-8" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="6p7t7H2nrpjSkSjg_kD2-8" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="-270" y="280" width="30" height="60" as="geometry" />
         </mxCell>
       </root>
